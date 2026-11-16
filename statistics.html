@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="task.js" defer></script>
+    <script src="task-manager.js" defer></script>
+    <script src="statistics.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container header__inner">
+            <h1 class="logo">Task tracker</h1>
+            <nav class="nav">
+                <a href="index.html" class="nav__link ">Задачи</a>
+                <a href="statistics.html" class="nav__link nav__link--active">Статистика</a>
+            </nav>
+        </div>
+    </header>
+    <main class="main">
+        <div class="container">
+            <h2 class="section-title">Статистика</h2>
+            <section class="statistics">
+                <div class="stat-card">
+                    <span class="stat-card__title">Всего задач:</span>
+                    <strong id="totalTasks" class="stat-card__number">0</strong>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-card__title">Выполнено:</span>
+                    <strong id="completedTasks" class="stat-card__number">0</strong>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-card__title">В процессе:</span>
+                    <strong id="activeTasks" class="stat-card__number">0</strong>
+                </div>
+            </section>
+            <section class="categories">
+                <h2 class="section-title">Задачи по категориям</h2>
+                <div class="categories-list" id="categoriesList"></div>
+            </section>
+        </div>
+    </main>
+</body>
+</html>

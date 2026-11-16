@@ -1,0 +1,322 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f5f7;
+    color: #222;
+}
+
+.container {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header */
+
+.header {
+    background: #fff;
+    border-bottom: 1px solid #ddd;
+}
+
+.header__inner {
+    min-height: 70px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    font-size: 24px;
+}
+
+.nav {
+    display: flex;
+    gap: 25px;
+}
+
+.nav__link {
+    color: #666;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.nav__link--active {
+    color: #222;
+    font-weight: 700;
+}
+
+/* Main */
+
+.main {
+    padding: 40px 0;
+}
+
+.section-title {
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+/* Form */
+
+.task-form {
+    padding: 25px;
+    margin-bottom: 40px;
+
+    background: #fff;
+    border-radius: 12px;
+}
+
+.form-group {
+    margin-bottom: 18px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 7px;
+    font-size: 14px;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    height: 45px;
+
+    padding: 0 12px;
+
+    border: 1px solid #ccc;
+    border-radius: 7px;
+
+    font-size: 15px;
+}
+
+.button {
+    height: 45px;
+
+    padding: 0 20px;
+
+    border: none;
+    border-radius: 7px;
+
+    background: #222;
+    color: #fff;
+
+    cursor: pointer;
+}
+
+.button:hover {
+    opacity: 0.85;
+}
+
+/* Tasks */
+
+.tasks__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    margin-bottom: 20px;
+}
+
+.filters {
+    display: flex;
+    gap: 8px;
+}
+
+.filter {
+    padding: 8px 12px;
+
+    border: 1px solid #ddd;
+    border-radius: 6px;
+
+    background: #fff;
+
+    cursor: pointer;
+}
+
+.filter--active {
+    background: #222;
+    color: #fff;
+}
+
+/* Task card */
+
+.tasks-list {
+    display: grid;
+    gap: 15px;
+}
+
+.task {
+    padding: 20px;
+
+    background: #fff;
+    border-radius: 10px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 20px;
+}
+
+.task--completed {
+    opacity: 0.6;
+}
+
+.task__content {
+    flex: 1;
+}
+
+.task__title {
+    margin-bottom: 8px;
+
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.task--completed .task__title {
+    text-decoration: line-through;
+}
+
+.task__category {
+    color: #777;
+    font-size: 14px;
+}
+
+.task__status {
+    margin-top: 5px;
+
+    color: #777;
+    font-size: 14px;
+}
+
+.task__buttons {
+    display: flex;
+    gap: 8px;
+}
+
+.task__button {
+    padding: 8px 12px;
+
+    border: 1px solid #ddd;
+    border-radius: 6px;
+
+    background: #fff;
+
+    cursor: pointer;
+}
+
+.task__button:hover {
+    background: #f1f1f1;
+}
+
+.empty {
+    padding: 40px;
+
+    text-align: center;
+
+    background: #fff;
+    border-radius: 10px;
+
+    color: #777;
+}
+
+/* Statistics */
+
+.statistics {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 20px;
+
+    margin-bottom: 40px;
+}
+
+.stat-card {
+    padding: 25px;
+
+    background: #fff;
+    border-radius: 10px;
+}
+
+.stat-card__title {
+    display: block;
+
+    margin-bottom: 15px;
+
+    color: #777;
+}
+
+.stat-card__number {
+    font-size: 36px;
+}
+
+/* Categories */
+
+.categories-list {
+    display: grid;
+    gap: 12px;
+}
+
+.category {
+    padding: 20px;
+
+    background: #fff;
+    border-radius: 10px;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.category__name {
+    font-weight: 600;
+}
+
+.category__count {
+    color: #777;
+}
+
+/* Mobile */
+
+@media (max-width: 600px) {
+
+    .header__inner {
+        flex-direction: column;
+        gap: 15px;
+
+        padding: 15px 20px;
+    }
+
+    .tasks__header {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .filters {
+        flex-wrap: wrap;
+    }
+
+    .task {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .task__buttons {
+        width: 100%;
+    }
+
+    .task__button {
+        flex: 1;
+    }
+
+    .statistics {
+        grid-template-columns: 1fr;
+    }
+}
